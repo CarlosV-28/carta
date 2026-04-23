@@ -12,7 +12,7 @@ body {
     height: 100vh;
     background-color: var(--bg);
     margin: 0;
-    overflow: hidden; /* Evita que aparezcan barras de scroll */
+    overflow: hidden;
 }
 
 .valentines {
@@ -20,7 +20,6 @@ body {
     cursor: pointer;
 }
 
-/* Cuerpo del sobre (Fondo) - MÁS GRANDE */
 .envelope {
     position: relative;
     width: 350px;
@@ -28,7 +27,6 @@ body {
     background-color: var(--color-sobre-oscuro);
 }
 
-/* La carta - MÁS GRANDE y ajustada */
 .card {
     position: absolute;
     background-color: var(--color-carta);
@@ -44,17 +42,16 @@ body {
     border: 2px solid #f8d7da;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el texto verticalmente */
+    justify-content: center;
 }
 
 .text {
     font-family: 'Georgia', serif;
     color: #444;
     text-align: center;
-    font-size: 16px; /* Letra un poco más grande para que se lea mejor */
+    font-size: 16px;
 }
 
-/* Frente del sobre - AJUSTADO A 350px */
 .front {
     position: absolute;
     border-right: 175px solid var(--color-sobre);
@@ -65,7 +62,6 @@ body {
     z-index: 3;
 }
 
-/* Solapa de arriba - AJUSTADA A 350px */
 .top-flap {
     position: absolute;
     border-top: 135px solid var(--color-sobre-oscuro);
@@ -77,7 +73,6 @@ body {
     z-index: 4;
 }
 
-/* Corazón del cierre - CENTRADO */
 .heart-icon {
     position: absolute;
     width: 50px;
@@ -100,18 +95,18 @@ body {
 .heart-icon::before { top: -25px; left: 0; }
 .heart-icon::after { left: -25px; top: 0; }
 
-/* --- ANIMACIONES --- */
+/* --- CAMBIO: AHORA USAMOS LA CLASE .open EN LUGAR DE :hover --- */
 
-.valentines:hover .top-flap {
+.valentines.open .top-flap {
     transform: rotateX(180deg);
     z-index: 0;
 }
 
-.valentines:hover .card {
-    transform: translateY(-150px); /* Sube más para que se vea toda */
+.valentines.open .card {
+    transform: translateY(-150px);
     z-index: 2;
 }
 
-.valentines:hover .heart-icon {
+.valentines.open .heart-icon {
     opacity: 0;
 }
