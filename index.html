@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="valentines">
+    <div class="valentines" id="envelope">
         <div class="envelope">
             <div class="card">
                 <div class="text">
-                    <strong>Para mi chiquita enojona:❤️💕❤️</strong><br>
-                    <p>"Sé que no es mucho, pero lo hice pensando en ti. Quiero que recuerdes que amo todo de ti: cómo sonríes, cómo te enojas, cómo me quieres, incluso cuando te pones triste... lo amo todo.
-
-Siempre recuerda que, aunque a veces no lo diga, te extraño muchooo mi enojona."</p>
-                    <div class="heart-small"></div>
+                    <strong style="display: block; margin-bottom: 10px;">Para ti:</strong>
+                    <p style="margin: 0; line-height: 1.4;">
+                        Sé que no es mucho, pero lo hice pensando en ti. Quiero que recuerdes que <strong>amo todo de ti</strong>: cómo sonríes, te enojas, cómo me quieres y hasta cuando te pones triste... todo.
+                    </p>
+                    <p style="margin-top: 10px; font-style: italic;">
+                        Y siempre recuerda que, aunque a veces no lo diga, ¡te extraño muchísimo, mi enojona! ❤️
+                    </p>
                 </div>
             </div>
         </div>
@@ -23,5 +25,13 @@ Siempre recuerda que, aunque a veces no lo diga, te extraño muchooo mi enojona.
         <div class="top-flap"></div>
         <div class="heart-icon"></div>
     </div>
+
+    <script>
+        // Este código hace que al hacer clic se ponga o se quite la clase "open"
+        const envelope = document.getElementById('envelope');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
